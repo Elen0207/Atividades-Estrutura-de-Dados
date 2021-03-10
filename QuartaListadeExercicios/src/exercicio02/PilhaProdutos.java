@@ -67,18 +67,22 @@ public class PilhaProdutos {
 
         try {
             if ( tamanhoAdicionada != 0 ) {
-                nome = JOptionPane.showInputDialog("Digite o nome Produto que deseja saber a ordem de espera: ");
+                nome = JOptionPane.showInputDialog("Digite o nome Produto que deseja remover: ");
 
                 for ( int i = 0; i < pilhaAdicionada.length; i++ ) {
                     if ( nome.equals(pilhaAdicionada[i].getNome()) ) { //associações entre classes	
                         p = pilhaAdicionada[i];
+                        
                         JOptionPane.showMessageDialog(null,"O Produto: "+ pilhaAdicionada[i].getNome() +" foi removido"); 
+                        
                         pilhaAdicionada[i] = pilhaAdicionada[i-1];
-                        tamanhoAdicionada --;
+                                                
                         AdicionaPilhaRemovido(p);
+                        
                         i = pilhaAdicionada.length;
                     } 
                 } 
+                tamanhoAdicionada --;
             } 
             else {
                 JOptionPane.showMessageDialog(null,"A Pilha está vazia");  

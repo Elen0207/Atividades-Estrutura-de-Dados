@@ -3,7 +3,9 @@ package exercicio02;
 import javax.swing.JOptionPane;
 
 public class Main {
-    public static void main(String[] args, PilhaProdutos pilhaProdutos) {
+
+    public static void main(String[] args) {
+
         PilhaProdutos pilha = new PilhaProdutos();	 //associações entre classes	
 		int opcao = 0, ID = 0, quantidade = 0; 
         double valor = 0.0;
@@ -32,27 +34,27 @@ public class Main {
 				case 2: 
                     ID = (int)(Math.random()*100);
                     nome = JOptionPane.showInputDialog("Digite o nome: ");
-                    valor  = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor: ")); 
+                    valor  = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor: ")); 
                     quantidade = Integer.parseInt(JOptionPane.showInputDialog("Digite o quantidade: ")); 
                        
-                    pilhaProdutos.AdicionaPilhaNovo(ID, nome, valor, quantidade);
+                    pilha.AdicionaPilhaNovo(ID, nome, valor, quantidade);
                     JOptionPane.showMessageDialog(null, "Novo produto adicionado com sucesso");
 				break;
 			
 				case 3: 
-                    pilhaProdutos.RemoveProduto(p);
+                    pilha.RemoveProduto(p);
 				break;
                     
                 case 4: 
-                    pilhaProdutos.BuscarNome(nome, p);
+                    pilha.BuscarNome(nome, p);
 				break;
 
                 case 5: 
-                    pilhaProdutos.BuscarPosicao(ID);
+                    pilha.BuscarPosicao(ID);
 				break;
 
                 case 6: 
-					pilhaProdutos.ExibirPilha();
+					pilha.ExibirPilha();
 				break;
 			
 				case 9:
