@@ -1,6 +1,8 @@
 1) O Detram necessita de uma aplicação que faça o gerenciamento das pessoas que se cadastraram de maneira online para o exame final. Dado o cenário implemente uma Fila Estática de Pessoas contendo as propriedades ID, nome, RG, telefone e data de nascimento. A aplicação deve:
+
     * Verificar se a fila está vazia, retornando true se estiver vazia e false se não estiver;
-    * Adicionar uma pessoa, caso a operação não possa ser realizada, mostre mensagemavisando;-removerumapessoa, caso a operação não possa ser realizada, mostre mensagemavisando;
+    * Adicionar uma pessoa, caso a operação não possa ser realizada, mostre mensagemavisando;
+    * Remover uma pessoa, caso a operação não possa ser realizada, mostre mensagem avisando;
     * Adicionar todas as pessoas removidas em uma pilha de pessoas; 
     * Pesquisar a ordem de espera de uma pessoa na fila
     * Percorrer e apresentarcada um dos elementos da fila
