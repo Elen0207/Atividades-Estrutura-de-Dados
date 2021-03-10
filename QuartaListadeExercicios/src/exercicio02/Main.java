@@ -5,7 +5,8 @@ import javax.swing.JOptionPane;
 public class Main {
     public static void main(String[] args, PilhaProdutos pilhaProdutos) {
         PilhaProdutos pilha = new PilhaProdutos();	 //associações entre classes	
-		int opcao = 0, ID = 0, valor = 0, quantidade = 0; 
+		int opcao = 0, ID = 0, quantidade = 0; 
+        double valor = 0.0;
         String nome = "";
         Produtos p = new Produtos(ID, nome, valor, quantidade); //associações entre classes	
 		
@@ -29,30 +30,29 @@ public class Main {
 				break;
 			
 				case 2: 
-                    
-                        ID = pilha.GerarId(ID);
-                        nome = JOptionPane.showInputDialog("Digite o nome: ");
-                        valor  = Integer.parseInt(JOptionPane.showInputDialog("Digite o RG: ")); 
-                        quantidade = Integer.parseInt(JOptionPane.showInputDialog("Digite o telefone: ")); 
+                    ID = (int)(Math.random()*100);
+                    nome = JOptionPane.showInputDialog("Digite o nome: ");
+                    valor  = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor: ")); 
+                    quantidade = Integer.parseInt(JOptionPane.showInputDialog("Digite o quantidade: ")); 
                        
-                        pilhaProdutos.AdicionaPilha(ID, nome, valor, quantidade);
-                    }
+                    pilhaProdutos.AdicionaPilhaNovo(ID, nome, valor, quantidade);
+                    JOptionPane.showMessageDialog(null, "Novo produto adicionado com sucesso");
 				break;
 			
 				case 3: 
-                    
+                    pilhaProdutos.RemoveProduto(p);
 				break;
-
+                    
                 case 4: 
-                        
+                    pilhaProdutos.BuscarNome(nome, p);
 				break;
 
                 case 5: 
-					
+                    pilhaProdutos.BuscarPosicao(ID);
 				break;
 
                 case 6: 
-					
+					pilhaProdutos.ExibirPilha();
 				break;
 			
 				case 9:

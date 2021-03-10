@@ -4,10 +4,10 @@ public class Produtos {
     //Criação dos endereços de memória
     private int ID;
     private String nome;
-    private int valor;
+    private double valor;
     private int quantidade;
         
-    public Produtos (int ID, String nome, int valor, int quantidade) {
+    public Produtos (int ID, String nome, double valor, int quantidade) {
         this.ID = ID;
         this.nome = nome;
         this.valor = valor;
@@ -30,11 +30,11 @@ public class Produtos {
         this.nome = nome;
     }
 
-    public int getValor() {
+    public double getValor() {
         return valor;
     }
 
-    public void setValor(int valor) {
+    public void setValor(double valor) {
         this.valor = valor;
     }
 
