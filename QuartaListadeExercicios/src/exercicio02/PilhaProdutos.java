@@ -62,34 +62,34 @@ public class PilhaProdutos {
         }
     }
 
-    //Remover uma pesquisa por nome do produto.
+    //Remover um produto pelo nome
     public void BuscarNome (String nome, Produtos p) {
+    	int cont = 0;
+    	
+        if ( tamanhoAdicionada != 0 ) {
+            nome = JOptionPane.showInputDialog("Digite o nome Produto que deseja remover: ");
 
-        try {
-            if ( tamanhoAdicionada != 0 ) {
-                nome = JOptionPane.showInputDialog("Digite o nome Produto que deseja remover: ");
-
-                for ( int i = 0; i < pilhaAdicionada.length; i++ ) {
-                    if ( nome.equals(pilhaAdicionada[i].getNome()) ) { //associações entre classes	
-                        p = pilhaAdicionada[i];
+            for ( int i = 0; i <= pilhaAdicionada.length; i++ ) {
+                if ( nome.equalsIgnoreCase(pilhaAdicionada[i].getNome()) ) { //associações entre classes	
+                    p = pilhaAdicionada[i];
                         
-                        JOptionPane.showMessageDialog(null,"O Produto: "+ pilhaAdicionada[i].getNome() +" foi removido"); 
+                    JOptionPane.showMessageDialog(null,"O Produto: "+ pilhaAdicionada[i].getNome() +" foi removido!"); 
                         
-                        pilhaAdicionada[i] = pilhaAdicionada[i-1];
-                                                
-                        AdicionaPilhaRemovido(p);
+                    pilhaAdicionada[i] = pilhaAdicionada[i+1];         
+                    AdicionaPilhaRemovido(p);
+                    i = pilhaAdicionada.length;
                         
-                        i = pilhaAdicionada.length;
-                    } 
-                } 
+                    cont = 1;
+                }
                 tamanhoAdicionada --;
             } 
-            else {
-                JOptionPane.showMessageDialog(null,"A Pilha está vazia");  
+               
+            if ( cont == 0 ) {
+                JOptionPane.showMessageDialog(null, "O produto: "+ nome +" não foi localizado!");
             }
         }
-        catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "O produto: "+ nome +" não foi localizado");
+        else {
+            JOptionPane.showMessageDialog(null,"Pilha vazia!");  
         }
     }
 

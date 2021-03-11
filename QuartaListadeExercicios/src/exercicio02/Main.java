@@ -13,7 +13,7 @@ public class Main {
         Produtos p = new Produtos(ID, nome, valor, quantidade); //associações entre classes	
 		
 		while (opcao != 9) {
-			opcao = Integer.parseInt(JOptionPane.showInputDialog("*** Loja Virtual *** \n\n"
+			opcao = Integer.parseInt(JOptionPane.showInputDialog(" *** Loja Virtual *** \n\n"
                 +"1 - Verificar se a Pilha está vazia. \n"
                 +"2 - Adicionar um produto na Pilha.\n"
                 +"3 - Remover um produto na Pilha e adicionar o produto removido em outra Pilha.\n"
@@ -26,7 +26,8 @@ public class Main {
 				case 1: 
                     if( pilha.ListaVazia() == true ) {
                         JOptionPane.showMessageDialog(null, "A Pilha está vazia!");
-                    } else {
+                    }
+                    else {
                         JOptionPane.showMessageDialog(null, "A Pilha não está vazia!");
                     }
 				break;
