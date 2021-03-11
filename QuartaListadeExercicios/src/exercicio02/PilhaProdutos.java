@@ -9,8 +9,8 @@ public class PilhaProdutos {
     private int tamanhoRemovida;
     
     public PilhaProdutos () {            
-        pilhaAdicionada = new Produtos [3];		//associações entre classes	
-        pilhaRemovida = new Produtos [3];    //associações entre classes	
+        pilhaAdicionada = new Produtos [10];		//associações entre classes	
+        pilhaRemovida = new Produtos [10];    //associações entre classes	
         tamanhoAdicionada = 0; 	
         tamanhoRemovida = 0;			
     }

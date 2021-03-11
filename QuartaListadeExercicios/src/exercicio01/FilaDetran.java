@@ -10,8 +10,8 @@ public class FilaDetran {
     private int tamanhoPilha;
     
     public FilaDetran () {            
-        fila = new Pessoas [3];		//associações entre classes	
-        pilha = new Pessoas [3];    //associações entre classes	
+        fila = new Pessoas [10];		//associações entre classes	
+        pilha = new Pessoas [10];    //associações entre classes	
         tamanhoFila = 0; 	
         tamanhoPilha = 0;			
     }
