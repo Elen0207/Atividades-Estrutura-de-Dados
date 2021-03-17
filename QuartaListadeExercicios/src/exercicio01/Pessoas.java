@@ -16,7 +16,7 @@ public class Pessoas {
         this.dNascimento = dNascimento;      
     }
 
-    public int getId() {
+    public int getId () {
         return ID;
     }
 
@@ -24,7 +24,7 @@ public class Pessoas {
         this.ID = ID;
     }
 
-    public String getNome() {
+    public String getNome () {
         return nome;
     }
 
@@ -32,27 +32,27 @@ public class Pessoas {
         this.nome = nome;
     }
 
-    public int getRg() {
+    public int getRg () {
         return RG;
     }
 
-    public void setRg(int RG) {
+    public void setRg (int RG) {
         this.RG = RG;
     }
 
-    public int getTelefone() {
+    public int getTelefone () {
         return telefone;
     }
 
-    public void setTelefone(int telefone) {
+    public void setTelefone (int telefone) {
         this.telefone = telefone;
     }
 
-    public String getDNascimento() {
+    public String getDNascimento () {
         return dNascimento;
     }
 
-    public void setDNascimento(String dNascimento) {
+    public void setDNascimento (String dNascimento) {
         this.dNascimento = dNascimento;
     }
 }

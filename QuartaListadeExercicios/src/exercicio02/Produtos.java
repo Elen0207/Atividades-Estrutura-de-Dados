@@ -14,7 +14,7 @@ public class Produtos {
         this.quantidade = quantidade;     
     }
 
-    public int getId() {
+    public int getId () {
         return ID;
     }
 
@@ -22,7 +22,7 @@ public class Produtos {
         this.ID = ID;
     }
 
-    public String getNome() {
+    public String getNome () {
         return nome;
     }
 
@@ -30,19 +30,19 @@ public class Produtos {
         this.nome = nome;
     }
 
-    public double getValor() {
+    public double getValor () {
         return valor;
     }
 
-    public void setValor(double valor) {
+    public void setValor (double valor) {
         this.valor = valor;
     }
 
-    public int getQuantidade() {
+    public int getQuantidade () {
         return quantidade;
     }
 
-    public void setQuantidade(int quantidade) {
+    public void setQuantidade (int quantidade) {
         this.quantidade = quantidade;
     }
 }

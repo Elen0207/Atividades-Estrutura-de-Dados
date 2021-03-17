@@ -37,7 +37,7 @@ public class PilhaProdutos {
     }
 
     //Remover um produto na Pilha e adicionar o produto removido em outra Pilha.
-    public void RemoveProduto(Produtos p) {
+    public void RemoveProduto (Produtos p) {
 
         if (pilhaAdicionada.length >= 1 && tamanhoAdicionada > 0) {
             JOptionPane.showMessageDialog(null,"Livro removido do final da Pilha: "  + pilhaAdicionada[tamanhoAdicionada-1].getNome()); 
