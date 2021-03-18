@@ -6,17 +6,16 @@ public class ListaEncadeada {
     private Aluno inicio;
     int RA = 0, posicao = 0; 
     String nome = "", turma = "", semestre = "";
-    Aluno [] alunos;
-    Aluno aluno = new Aluno(RA, nome, turma, semestre, alunos); 
+    Aluno aluno = new Aluno(RA, nome, turma, semestre); 
 
     public ListaEncadeada() {    
         inicio = null;
     }
 
     //Adicione um aluno no final da lista.
-    public void AdicionaFinal(int RA, String nome, String turma, String semestre, Aluno [] alunos) { 	
+    public void AdicionaFinal(int RA, String nome, String turma, String semestre) { 	
 		if (inicio == null) {			
-			Aluno aluno = new Aluno(RA, nome, turma, semestre, alunos); 				
+			Aluno aluno = new Aluno(RA, nome, turma, semestre); 				
 			inicio = aluno;					
 		}  
 		else {
@@ -27,7 +26,7 @@ public class ListaEncadeada {
 					aux = aux.proximo;				
 				} 
 
-				Aluno n = new Aluno(RA, nome, turma, semestre, alunos);				
+				Aluno n = new Aluno(RA, nome, turma, semestre);				
 				aux.proximo = n;								
 			} 
 			catch (Exception e2) {
@@ -37,18 +36,18 @@ public class ListaEncadeada {
 	} 
 
     //Adicione um  aluno no início da lista.
-    public void AdicionaInicio(int RA, String nome, String turma, String semestre, Aluno [] alunos) {			
-        Aluno aluno = new Aluno(RA, nome, turma, semestre, alunos); 						      
+    public void AdicionaInicio(int RA, String nome, String turma, String semestre) {			
+        Aluno aluno = new Aluno(RA, nome, turma, semestre); 						      
         aluno.proximo = inicio;						
         inicio = aluno;							
     }
 
     //Adicione um aluno no meio da lista.
-    public void AdicionarPosicao(int RA, String nome, String turma, String semestre, Aluno [] alunos, int posicao) {
-        Aluno novo = new Aluno(RA, nome, turma, semestre, alunos);		
+    public void AdicionarPosicao(int RA, String nome, String turma, String semestre, int posicao) {
+        Aluno novo = new Aluno(RA, nome, turma, semestre);		
         
         if ( posicao == 1 ) {
-            AdicionaInicio(RA, nome, turma, semestre, alunos);
+            AdicionaInicio(RA, nome, turma, semestre);
         } 
         else {
             Aluno aux = inicio;			
