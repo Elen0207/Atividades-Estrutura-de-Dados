@@ -6,12 +6,17 @@ public class Aluno {
     private String nome;
     private String turma;
     private String semestre;
+    
+    public Aluno[] dado;
+    public Aluno proximo;
 
-    public Aluno (int RA, String nome, String turma, String semestre ) {
+    public Aluno ( int RA, String nome, String turma, String semestre, Aluno [] aluno ) {
         this.RA = RA;
         this.nome = nome;
         this.turma = turma;
         this.semestre = semestre;
+        dado = aluno;
+        proximo = null;
     }
 
     public int getRA() {

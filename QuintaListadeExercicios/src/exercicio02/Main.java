@@ -7,7 +7,7 @@ public class Main {
         ListaEncadeada lista = new ListaEncadeada();	 	
 		int opcao = 0, RA = 0, posicao = 0; 
         String nome = "", turma = "", semestre = "";
-        Aluno aluno = new Aluno(RA, nome, turma, semestre); 
+		Aluno [] alunos = new Aluno [0];
 		
 		while (opcao != 9) {
 			opcao = Integer.parseInt(JOptionPane.showInputDialog("*** ALUNO *** \n\n"
@@ -27,7 +27,7 @@ public class Main {
 					turma = JOptionPane.showInputDialog("Digite a turma: ");
 					semestre = JOptionPane.showInputDialog("Digite o semestre: ");
 
-					lista.AdicionaFinal(aluno);
+					lista.AdicionaFinal(RA, nome, turma, semestre, alunos);
 					JOptionPane.showMessageDialog(null, "Novo aluno foi adicionado com sucesso");
 				break;
 			
@@ -37,7 +37,7 @@ public class Main {
 					turma = JOptionPane.showInputDialog("Digite a turma: ");
 					semestre = JOptionPane.showInputDialog("Digite o semestre: ");
 
-					lista.AdicionaInicio(aluno);
+					lista.AdicionaInicio(RA, nome, turma, semestre, alunos);
 					JOptionPane.showMessageDialog(null, "Novo aluno foi adicionado com sucesso");
 				break;
 			
@@ -49,7 +49,7 @@ public class Main {
 
 					posicao = Integer.parseInt(JOptionPane.showInputDialog("Digite a posição que deseja inserir esse aluno: "));
 
-					lista.AdicionarPosicao(aluno, posicao);
+					lista.AdicionarPosicao(RA, nome, turma, semestre, alunos, posicao);
 					JOptionPane.showMessageDialog(null, "Novo aluno foi adicionado com sucesso");
 				break;
 
